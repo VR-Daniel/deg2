@@ -19,7 +19,7 @@ deg2 is an R package intended to calculate areas from pixels meeting certain cri
 * Download the devtools package, from the RStudio "Install Packages" menu or using:
 ```
 > install.packages("devtools")
-> library(devtools
+> library(devtools)
 ```
 * Download and install the deg2 package using:
 ```
