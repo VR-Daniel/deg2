@@ -9,6 +9,7 @@ deg2area(
   classCriteria,
   outputUnits = "km2",
   intervalType = 2,
+  corShape = "T",
   uncorrected = FALSE
 )
 }
@@ -21,11 +22,13 @@ deg2area(
 
 \item{intervalType}{Indicates the type of interval when \code{classCriteria} is a range matrix. It may be of four types: \code{1} for left open and right closed, \code{2} for left open and right closed except the first class which is closed, \code{3} for left closed and right open, and \code{4} for left closed and right open except the last class which is closed. By default it is \code{2}. The range matrix accepts \code{-Inf} and \code{Inf} as values.}
 
+\item{corShape}{Indicates the geometric shape for the calculation of the areas. It may be "S" for square or "T" for a trapezoid (by default). When the shape is defined as a square, the pixel centroid latitude is used for the degrees to distance equivalence, and then the area is calculated for a perfect square in planar space. When the shape is a trapezoid, the area is calculated using the trapezium formula, in an attempt to approximate the real shape of the "cells" in a tridimensional space when increasing latitude. For this last, the total sum of areas for small resolution rasters is more precise (as in the Riemann sum) but computationally more expensive.}
+
 \item{uncorrected}{Boolean indicating if the output should include a non-corrected area column (for comparison purposes only). The non-corrected area assumes distances at latitude 0°, that is, 1 arcsec = 30.87 meters. By default it is \code{FALSE}.}
 }
 \value{
 A data frame when the input is a single raster, or a list when multiple, including the pixel values used for classification, the number of pixels meeting the classification criteria, and the area in the selected units.
 }
 \description{
-\code{deg2area} calculates semi-corrected areas from raster files with cells in degrees, given that the equivalence of degrees to distance varies cosine-based latitudinally. Areas are considered semi-corrected because despite the latitudinal correction, the procedure assumes pixels as perfect squares in planar space.
+\code{deg2area} calculates semi-corrected areas from raster files with cells in degrees, given that the equivalence of degrees to distance varies cosine-based latitudinally. Areas are considered semi-corrected because despite the latitudinal correction, the procedure is performed in planar space.
 }

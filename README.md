@@ -43,7 +43,8 @@ deg2 is an R package intended to calculate areas from pixels meeting certain cri
 * Juan D. Vásquez-Restrepo ([@microteiido](https://twitter.com/microteiido))
 
 ## Version history
-
+* 1.1.0
+    * An option for calculating semi-corrected areas based on squared or trapezoidal "cells" was added (see deg2area function help)
 * 1.0.0
     * Initial release
 
