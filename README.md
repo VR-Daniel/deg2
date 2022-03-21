@@ -43,6 +43,8 @@ deg2 is an R package intended to calculate areas from pixels meeting certain cri
 * Juan D. Vásquez-Restrepo ([@microteiido](https://twitter.com/microteiido))
 
 ## Version history
+* 1.1.1
+    * Fixed error message "Oops! Raster must have the same resolution in the x and y dimensions" when raster resolution differs by more than seven decimal places. By default, R displays a maximum of seven digits, so differences beyond that can make raster dimensions look the same. If the error appears, it is recommended to resample the raster to make the dimensions match
 * 1.1.0
     * An option for calculating semi-corrected areas based on squared or trapezoidal "cells" was added (see deg2area function help)
 * 1.0.0
