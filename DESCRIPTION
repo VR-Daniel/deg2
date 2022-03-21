@@ -1,8 +1,8 @@
 Package: deg2
 Type: Package
 Title: Latitudinal semi-corrected areas from raster files in degrees
-Version: 1.1.0
-Date: 2021-07-23
+Version: 1.1.1
+Date: 2022-03-21
 Author: Juan D. Vásquez-Restrepo <juanda037@outlook.com>
 Maintainer: Juan D. Vásquez-Restrepo <juanda037@outlook.com>
 Depends: R (>= 4.0.0), dplyr, raster

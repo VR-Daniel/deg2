@@ -93,7 +93,7 @@ deg2area <- function(raster, classCriteria, outputUnits = "km2", intervalType = 
 }
 
 deg2area.int <- function(raster, classCriteria, outputUnits, intervalType, corShape, uncorrected){
-  if(res(raster)[1] == res(raster)[2]){
+  if(round(res(raster)[1], 7) == round(res(raster)[2], 7)){
     arcsec <- deg2arc(res(raster)[1])
   }else{
     cat("\n")
